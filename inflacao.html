@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang= "pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inflação</title>
+</head>
+
+<body>
+
+    <h2>Inflação</h2>
+
+    <script>
+
+        function pulalinha(){
+            document.write("<br>")
+            document.write("<br>")
+
+        }
+            
+        
+        function mostra(frase){
+            document.write(frase);
+            pulalinha();
+        }
+        function calcula_infla(produto, preco1, preco2){
+            var infla = (preco2-preco1);
+            mostra("A inflação do(a) " + produto + " é " + infla);
+            return infla;
+            
+        }
+        function calcula_media(infla1,infla2,infla3){
+
+            var infla_media = (infla1+infla2+infla3)/3;
+            mostra("A inflação média dos produtos é "+infla_media);
+            return infla_media;
+            
+        }
+        function calcula_infla_dia(infla_prod){
+            var infla_dia = infla_prod/6;
+            mostra(infla_dia);
+            return infla_dia;
+
+        }
+    
+        var infla_tomate=calcula_infla("tomate ",3.30,4.70)
+
+        var infla_arroz=calcula_infla("arroz ",2.99,3.25)
+
+        var infla_cenoura=calcula_infla("cenoura",3.99,4.14)
+
+        var infla_media_prod = calcula_media(infla_arroz,infla_cenoura,infla_tomate);
+
+        var infla_dia_tomate = calcula_infla_dia(infla_tomate)
+
+        var infla_dia_arroz = calcula_infla_dia(infla_arroz)
+
+        var infla_dia_cenoura = calcula_infla_dia(infla_cenoura);
+
+    </script>
+</body>
+
+</html>
+
+    
